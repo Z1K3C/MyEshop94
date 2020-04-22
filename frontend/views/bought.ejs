@@ -1,0 +1,209 @@
+<!--Call partial header-->
+<%- include('partials/header.ejs'); %>
+
+  <!--Navbar whit logo and text title-->
+  <section class="Mys_back2">
+    <div class="container py-2" >
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4">
+          <a class="pl-4" href="/"><img src="/img/logo1.png" class="Mys_icon1"></a>
+          <span class="pl-3 Mys_cartitle0">MyEshop94</span>
+        </div>
+        <div class="col-12 col-md-8 Mys_cartitle1">
+          <span class="Mys_cartitle2">Mi carrito de compras</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--body section that fill whit cart product select previously for client-->
+  <section class="container my-1" style="min-height: 500px;">
+    <div id="bgt_cartall" class="row">
+      <% if(amount){ %>   <!--if amount exist then...-->
+        <div class="col-md-8 col-12">
+          <div id="bgt_cartgroup" class="row">
+
+            <% cart[1].forEach(function(inf,ind){ %>    <!--create a  card for each product...-->
+              <div id="<%= inf['_id'] %>" class="col-md-12 col-12 px-0">
+
+                <section class="p-2">
+
+                  <div class="card Mys_cart_bdy">
+                    <div class="row no-gutters align-items-center">
+              
+                      <section class="col-lg-4 col-12 text-center w-auto">
+                        <img src="<%= inf['imagePath'] %>" class="card-img Mys_cart_img">
+                      </section>
+              
+                      <section class="col-lg-8 col-12 pl-3">
+                        <div class="card-body py-1 ">
+              
+                          <div class="row">
+                            <div class="col-xl-7 col-md-6 col-12 pr-0 Mys_cart_name">
+                              <%= inf['nombre'] %>
+                            </div>
+                            <div class="col-xl-5 col-md-6 col-12 Mys_cart_sold" >
+                              $ <%= inf['precio'] %>
+                            </div>
+                          </div>
+              
+                          <p class="card-text m-0 Mys_cart_desc">
+                            <%= inf['descripcion'] %>
+                          </p>
+              
+                          <div class="row Mys_cart_btns">
+                            <div class="col-sm-7 col-5 pr-0"><%= inf['marca'] %></div>
+                            <div class="col-sm-5 col-7">
+                              <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                  <button id="btnp_<%= inf['_id'] %>" class="btn btn-outline-secondary" type="button">
+                                    <i id="btnp_<%= inf['_id'] %>" class="fas fa-plus-circle"></i>
+                                  </button>
+                                </div>
+                                <input id="Amt_<%= inf['_id'] %>" type="number" class="form-control text-right" value="<%= cart[0][ind] %>"  aria-describedby="button-addon4" style="font-size: 16px;" >
+                                <div class="input-group-append">
+                                  <button id="btnm_<%= inf['_id'] %>" class="btn btn-outline-secondary" type="button">
+                                    <i id="btnm_<%= inf['_id'] %>" class="fas fa-minus-circle"></i>
+                                  </button>
+                                  <button id="btnt_<%= inf['_id'] %>" class="btn btn-outline-secondary" type="button">
+                                    <i id="btnt_<%= inf['_id'] %>" class="fas fa-trash-alt"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+              
+                        </div>
+                      </section>
+              
+                    </div>
+                  </div>
+
+                </section>
+
+              </div>
+            <% }); %>  
+
+          </div>
+        </div>
+        <!--This section show resume buy-->
+        <div class="col-md-4 col-12 order-md-2 mb-4 mt-3">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Resumen de compra</span>
+              <% if(amount){ %>
+                <span id="bgt_amount" class="badge badge-secondary badge-pill"><%= amount %></span>
+              <% }else{ %>
+                <span id="bgt_amount" class="badge badge-secondary badge-pill"></span>
+              <% } %>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Subtotal</h6>
+                <small class="text-muted"></small>
+              </div>
+              <% if(subtotal){ %>
+                <span id="bgt_subt" class="text-muted">$ <%= subtotal %>.00</span>
+              <% }else{ %>
+                <span id="bgt_subt" class="text-muted">$ 0.00</span>
+              <% } %>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Envio</h6>
+                <small class="text-muted"></small>
+              </div>
+              <span id="bgt_deliv" class="text-muted">$ 00.00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (MXN)</span>
+              <% if(subtotal){ %>
+                <strong id="bgt_total">$ <%= total %>.00</strong>
+              <% }else{ %>
+                <strong id="bgt_total">$ 200.00</strong>
+              <% } %>
+            </li>
+          </ul>
+          <% if(logged){ %>     <!--this section show 1 or 2 buttons depend if client is logged-->
+                                <!-- Show 2 buttons, confirm status and pay button-->
+            <div class="card">
+              <btn id="bgt_loginbtn" type="button" class="btn btn-lg btn-success btn-block m-2 Mys_cardbtn w-auto" href="/cart/login">
+                <%= email %> iniciado correctamente <i class="far fa-thumbs-up pl-2"></i>
+              </btn>
+            </div>
+
+            <script src="https://js.stripe.com/v3/"></script>
+            
+            <div class="card">
+              <button id="bgt_paybtn" type="button" class="btn btn-lg btn-secondary btn-block m-2 Mys_cardbtn w-auto" data-toggle="modal" data-target="#myModal">
+                Pagar mediante stripe <i class="fas fa-money-bill-alt pl-2"></i>
+              </button>
+            </div>
+
+            <br class="my-5"></br>
+
+            <div class="card mt-5" >
+              <div class="m-2" style="font-family: poppins1; font-size: 16px; text-align: justify;">
+                <span style="color: black; font-weight: bold;">
+                  Nota del desarrollador : 
+                </span>
+                <span style="color: black;">
+                  La aplicacion esta en modo de prueba, por lo que solo se aceptara la tarjeta de credito
+                  con numero 
+                </span>
+                <span style="color: red;">
+                  4242-4242-4242-4242 
+                </span>
+                <span style="color: black;">
+                  como metodo de pago de prueba, esto siguiendo las indicaciones de la aplicacion 
+                  <a href="https://stripe.com/" target="_blank">stripe.com&copy; </a>
+                </span>
+              </div>
+            </div>
+
+          <% }else{ %>        <!--This section show gmail button login-->
+            <div class="card">
+              <a type="button" class="btn btn-outline-secondary btn-block m-2 Mys_cardbtn w-auto" href="/cart/login">
+                Inicia sesion con tu cuenta de 
+                gmail para continuar <i class="fas fa-sign-in-alt pl-2"></i>
+              </a>
+            </div>
+          <% } %>
+
+        </div>
+        <!--if the cart is empty show a message with this-->
+    </div> 
+        <div id="bgt_emptycart" class="col-md-10 col-12 mx-auto py-5" style="display: none;">
+          <div class="card">
+            <p class="text-center pt-4 Mys_cart_empty">
+              Tu carrito esta vacio
+            </p>
+            <div class="my-5 Mys_cart_empty2">
+              <img src="/img/momo1.jpg" class="Mys_cart_empty3">
+            </div>
+          </div>
+        </div>
+      <% }else{ %>
+        <div id="bgt_cartgroup"></div>
+        <div id="bgt_emptycart" class="col-md-10 col-12 mx-auto py-5" >
+          <div class="card">
+            <p class="text-center pt-4 Mys_cart_empty">
+              Tu carrito esta vacio
+            </p>
+            <div class="my-5 Mys_cart_empty2">
+              <img src="/img/momo1.jpg" class="Mys_cart_empty3">
+            </div>
+          </div>
+        </div>
+
+
+      <% }; %>
+    
+  </section>
+  <!--Call partial where is the footer-->
+  <%- include('partials/footer.ejs'); %>
+
+</body>
+<!--Call javascript-->
+<script src="/js/bought.js"></script>
+</html>

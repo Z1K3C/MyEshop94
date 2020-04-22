@@ -1,0 +1,28 @@
+<!--partal call, this card fill with informacion about just a product-->
+<section class="container">
+    <div id="sqr_cards" class="row">
+      <% if(items){ %>  <!--if exist this value-->
+        <% items.forEach(function(inf,ind){ %>  <!--for each product...-->
+          <div id="<%= ind %>" class="col-xl-3 col-lg-4 col-md-6 col-12 p-2 animated fadeIn slow">
+            <section id="<%= inf['_id'] %>" class="card Mys_cardgnral">
+              <div class="Mys_cardimgheader">
+                <img src="<%= inf['imagePath'] %>" class="card-img-top p-2 Mys_cardimg" alt="...">
+              </div>
+              <div class="card-body py-2 Mys_cardbdyheader">  <!--...call this parameters-->
+                <p class="card-title m-0 Mys_cardsold"> $ <%= inf['precio'] %></p>
+                <p class="card-text m-0 Mys_cardtitle"><%= inf['nombre'] %></p>
+                <p class="card-text m-0 Mys_cardnote"><%= inf['descripcion'] %></p>
+                <p class="card-text m-0 Mys_cardbrand"><%= inf['marca'] %></p>
+              </div>
+              <div class="p-2 cardmyfooter">
+                <!--create a button with product's id-->
+                <button id="btn_<%= inf['_id'] %>" type="button" class="btn btn-secondary btn-block p-1 Mys_cardbtn">
+                  Agregar al carrito <i id="btn_<%= inf['_id'] %>" class="fas fa-shopping-cart pl-3" ></i>
+                </button>
+              </div>
+            </section>
+          </div>
+        <% }); %>
+      <% }; %>
+    </div>
+</section>

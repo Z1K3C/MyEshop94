@@ -1,0 +1,113 @@
+/*------------------------------------- Add fonts -------------------------------------*/
+
+@font-face {
+    font-family: 'gotu1';
+    src: url('/font/Gotu-Regular.ttf');
+  }
+@font-face {
+    font-family: 'poppins1';
+    src: url('/font/Poppins-Regular.ttf');
+  }
+@font-face {
+    font-family: 'sand1';
+    src: url('/font/Quicksand-Regular.ttf');
+  }
+@font-face {
+    font-family: 'lobster1';
+    src: url('/font/Lobster-Regular.ttf');
+  }
+@font-face {
+    font-family: 'yanone1';
+    src: url('/font/YanoneKaffeesatz-Regular.ttf');
+  }
+@font-face {
+    font-family: 'baloo1';
+    src: url('/font/BalooTammudu2-Medium.ttf');
+  }
+@font-face {
+    font-family: 'warfare1';
+    src: url('/font/ModernWarfare-8MM6z.ttf');
+  }
+  
+/*------------------------------------- Add classes -------------------------------------*/
+  
+.Mys_gradient1 {
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
+}
+
+
+.Mys_cardgnral{
+  height: 450px; 
+  border-width: 3px; 
+  border-style: solid; 
+  border-color: gray
+}
+
+.Mys_cardimgheader{
+  height: 200px; 
+  align-self: center;
+}
+
+.Mys_cardimg{
+  align-self: center; 
+  overflow: hidden; 
+  height: 200px; 
+  max-width: 225px; 
+  width: auto;
+}
+
+.Mys_cardbdyheader{
+  background-color: rgb(240,240,240); 
+  overflow: hidden;
+}
+
+.Mys_cardsold{
+  height: 45px; 
+  overflow: hidden; 
+  font-family: poppins1; 
+  font-size: 30px;
+}
+
+.Mys_cardtitle{
+  height: 35px; 
+  overflow: hidden; 
+  font-family: gotu1; 
+  font-size: 22px;
+}
+
+.Mys_cardnote{
+  height: 75px; 
+  overflow: hidden; 
+  font-family: sand1; 
+  font-size: 16px;
+}
+
+.Mys_cardbrand{
+  height: 30px; 
+  overflow: hidden; 
+  font-family: sand1; 
+  font-size: 16px;
+}
+
+.Mys_cardfooter{
+  background-color: rgb(240,240,240);
+}
+
+.Mys_cardbtn{
+  overflow: hidden; 
+  font-family: poppins1; 
+  font-size: 16px;
+}
+
+.Mys_footback{
+  background-color: gray; 
+  min-height: 200px; 
+  font-family: poppins1;
+}
+
+.Mys_footicon1{
+  height: 44px; 
+  width: 44px;
+}

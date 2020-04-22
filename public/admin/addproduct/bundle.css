@@ -1,0 +1,104 @@
+/*------------------------------------- Add fonts -------------------------------------*/
+
+@font-face {
+  font-family: 'gotu1';
+  src: url('/font/Gotu-Regular.ttf');
+}
+@font-face {
+  font-family: 'poppins1';
+  src: url('/font/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'sand1';
+  src: url('/font/Quicksand-Regular.ttf');
+}
+@font-face {
+  font-family: 'lobster1';
+  src: url('/font/Lobster-Regular.ttf');
+}
+@font-face {
+  font-family: 'yanone1';
+  src: url('/font/YanoneKaffeesatz-Regular.ttf');
+}
+@font-face {
+  font-family: 'baloo1';
+  src: url('/font/BalooTammudu2-Medium.ttf');
+}
+@font-face {
+  font-family: 'warfare1';
+  src: url('/font/ModernWarfare-8MM6z.ttf');
+}
+
+/*------------------------------------- Add classes -------------------------------------*/
+
+.Mys_gradient1 {
+  background: #8e9eab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
+}
+
+.Mys_background1 {
+  background-color: gray;
+}
+
+.Mys_background2 {
+  background-color: rgb(245,245,245); 
+  color: black; 
+  font-size: gotu1;
+}
+
+.Mys_backgroundf {
+  background-color: gray; 
+  min-height: 200px; 
+  font-family: poppins1;
+}
+
+.Mys_iconnav{
+  width: 35px; 
+  height: 35px;
+}
+
+.Mys_iconmedia{
+  height: 44px; 
+  width: 44px;
+}
+
+.Mys_iconsocial{
+  font-size: 20px;
+}
+
+.Mys_prevsquad{
+  width: 100%; 
+  height: 175px;
+}
+
+.Mys_title2 {
+  vertical-align: middle; 
+  font-family: lobster1; 
+  color: white; 
+  font-size: 20px;
+}
+
+.Mys_footback{
+  background-color: gray; 
+  min-height: 200px; 
+  font-family: poppins1;
+}
+
+.Mys_footicon1{
+  height: 44px; 
+  width: 44px;
+}
+
+
+.Mys_title1 {
+  vertical-align: middle; 
+  font-family: lobster1; 
+  color: white; 
+  font-size: 20px;
+}
+@media screen and (max-width: 1000px) {
+    .Mys_title1 {
+      display: none;
+      }
+  }

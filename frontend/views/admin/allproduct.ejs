@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEshop94</title>
+
+    <link href="/css/b4/bootstrap.css" rel="stylesheet">
+    <link href="/css/fa/css/all.css" rel="stylesheet">
+    <link href="/css/animate/animate.css" rel="stylesheet">
+    <script src="/js/bootstrap-native-v4.min.js"></script>
+
+    <link rel="stylesheet" href="/admin/allproduct/bundle.css">
+
+</head>
+<body class="Mys_gradient1">
+  <!--Create navigation bar with logo and return button-->
+  <section style="background-color: gray; font-family: lobster1;">
+    <div class="container py-2" >
+      <div class="row">
+        <div class="col">
+          <a class="pl-4" href="/"><img src="/img/logo1.png" alt="" style="width: 35px; height: 35px;"></a>
+          <span class="pl-3" style="  vertical-align: middle; font-family: lobster1; color: white; font-size: 20px;">MyEshop94</span>
+        </div>
+        <div class="col-6">
+        </div>
+        <div class="col text-right mr-1">
+          <a class="btn btn-outline-secondary text-white" style="font-family: poppins1;" href="/admin/main">
+            <i class="far fa-hand-point-left"></i> PANEL PRINCIPAL
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Create body with card that include all products separete for category (all product loaded thorow javascript/restapi)-->
+  <section id="all_navs" class="container py-3" style="min-height: 500px;">  
+    <ul class="nav nav-tabs nav-fill" id="all_onavs" role="tablist"> 
+
+    </ul>  
+    <div class="tab-content" id="all_otabs">
+
+    </div>
+  </section>
+  <!--Call partial where is the footer-->
+  <%- include('../partials/footer.ejs'); %>
+
+</body>
+<!--Call javascript-->
+<script src="/admin/allproduct/bundle.js"></script>
+</html>

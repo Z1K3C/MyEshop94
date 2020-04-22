@@ -1,0 +1,92 @@
+<!--Create buttons in button page-->
+<section id="pgs_body" class="container">
+  <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+    <% if(limit == 1){ %>     <!--if limit is 1 show a only button--> 
+      <div class="btn-group mr-2" role="group" aria-label="Second group">
+        <a class="btn btn-secondary" href="/1">1</a> 
+      </div>
+    <%} else if(limit == 2){ %>   <!--if limit is 2, then...-->
+      <%if(page == 1){ %>         <!--and the page is 1 show 2 buttons and next option-->
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <a class="btn btn-secondary" href="/1">1</a> 
+          <a class="btn btn-secondary" href="/2">2</a> 
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <a class="btn btn-secondary" href="/2">Siguiente</a> 
+        </div>
+      <%} else if(page == 2){ %>  <!--and the page is 2 show 2 buttons and previus option-->
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <a class="btn btn-secondary" href="/1">Atras</a> 
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <a class="btn btn-secondary" href="/1">1</a> 
+          <a class="btn btn-secondary" href="/2">2</a> 
+        </div>
+      <%} %>
+    <%} else if(limit == 3){ %>   
+      <%if(page == 1){ %>      
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <a class="btn btn-secondary" href="/1">1</a> 
+          <a class="btn btn-secondary" href="/2">2</a> 
+          <a class="btn btn-secondary" href="/3">3</a> 
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <a class="btn btn-secondary" href="/2">Siguiente</a> 
+        </div>
+      <%} else if(page == 2){ %>
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <a class="btn btn-secondary" href="/1">Atras</a> 
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <a class="btn btn-secondary" href="/1">1</a> 
+          <a class="btn btn-secondary" href="/2">2</a> 
+          <a class="btn btn-secondary" href="/3">3</a> 
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <a class="btn btn-secondary" href="/3">Siguiente</a> 
+        </div>
+      <%} else if(page == 3){ %>
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <a class="btn btn-secondary" href="/2">Atras</a> 
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <a class="btn btn-secondary" href="/1">1</a> 
+          <a class="btn btn-secondary" href="/2">2</a> 
+          <a class="btn btn-secondary" href="/3">3</a> 
+        </div>
+      <%} %>
+    <%} else{ %>              <!--if limit is major to three, then generate buttons depend the page number-->
+      <%if(page == 1){ %>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <a class="btn btn-secondary" href="/1">1</a> 
+          <a class="btn btn-secondary" href="/2">2</a> 
+          <a class="btn btn-secondary" href="/3">3</a> 
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <a class="btn btn-secondary" href="/3">Siguiente</a> 
+        </div>
+      <%} else if(page == limit){ %>
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <a class="btn btn-secondary" href="/<%= Number(page)-1 %>">Atras</a> 
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <a class="btn btn-secondary" href="/<%= Number(page)-2 %>"><%= Number(page)-2 %></a> 
+          <a class="btn btn-secondary" href="/<%= Number(page)-1 %>"><%= Number(page)-1 %></a> 
+          <a class="btn btn-secondary" href="/<%= page %>"><%= page %></a> 
+        </div>
+      <% }else{ %>
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <a class="btn btn-secondary" href="/<%= Number(page)-1 %>">Atras</a> 
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <a class="btn btn-secondary" href="/<%= Number(page)-1 %>"><%= Number(page)-1 %></a> 
+          <a class="btn btn-secondary" href="/<%= page %>"><%= page %></a> 
+          <a class="btn btn-secondary" href="/<%= Number(page)+1 %>"><%= Number(page)+1 %></a> 
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <a class="btn btn-secondary" href="/<%= Number(page)+1 %>">Siguiente</a> 
+        </div>
+      <% } %>  
+    <%} %>    
+  </div>
+</section>

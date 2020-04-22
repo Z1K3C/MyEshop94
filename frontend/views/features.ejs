@@ -1,0 +1,443 @@
+<!--Call partial header-->
+<%- include('partials/header.ejs'); %>
+
+  <!--Call partial navbar whit option for show status buy client-->
+  <% if((amount)&&(type)){ %>
+    <%- include('partials/navbar.ejs',{amount: amount, type: type, products: products}); %>
+  <%} else{ %>
+    <%- include('partials/navbar.ejs'); %>
+  <%} %>
+  
+  <!--call sections-->
+  <section class="my-3">
+    <p class="Mys_fttitle">Tecnologias utilizadas en esta aplicacion</p>
+  </section>
+  <!-- HTML -->
+  <section class="container my-3">
+    <p class="Mys_ftsubt">HTML \</p>
+  </section>
+  <section class="container">
+    <div class="row">
+
+      <section id="ftr_ejs" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center mt-2 w-auto">
+              <img src="/img/FT_ejs.png" style="width: 270px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  EJS
+                </p>
+                <p class="mb-1 Mys_ftcardc">
+                  Motor de plantillas utilizado para renderizar codigo HTML y Javascript del lado del servidor.
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://ejs.co/" target="_blank"> ejs.co</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_vscode" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_vscode.png" style="height: 125px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  VISUAL STUDIO CODE
+                </p>
+                <p class="mb-1 Mys_ftcardc">
+                  Uno de los editores de codigo mas famosos del momento, es el editor utilizado en el desarrollo de este proyecto.
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://code.visualstudio.com/" target="_blank"> visualstudio.com</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_faztcide" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_faztcode.png" style="height: 125px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  FAZT CODE
+                </p>
+                <p class="mb-1 Mys_ftcardc">
+                  Canal de youtube con gran contenido de aprendizaje respecto a temas de desarrollo web.
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al canal de youtube: <a class="text-white" href="https://www.youtube.com/channel/UCMn28O1sQGochG94HdlthbA" target="_blank"> Fazt code</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+  <!-- JAVASCRIPT -->
+  <section class="container my-3">
+    <p class="Mys_ftsubt">JAVASCRIPT \</p>
+  </section>
+
+  <section class="container">
+    <div class="row">
+
+      <section id="ftr_nodejs" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <i class="fab fa-node-js" style="font-size: 125px; color: rgb(104,159,99);"></i>
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="mb-1 Mys_ftcardt">
+                  NODE JS
+                </p>
+                <p class="mb-1 Mys_ftcardc">
+                  Javascript siendo uno de los lenguajes mas utilizados, con esta tecnologia llamada Node JS ahora
+                  podemos escribir codigo JS del lado del servidor.
+                </p>
+                <p class="mb-1 Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://nodejs.org/" target="_blank"> nodejs.org</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_express" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_express.png" style="height: 125px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  EXPRESS JS
+                </p>
+                <p class="mb-1 Mys_ftcardc">
+                  Framework de Node JS, express nos permite correr funciones de servidor de una manera mas sencilla.
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://expressjs.com/" target="_blank"> expressjs.com</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_stripe" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <i class="fab fa-stripe" style="font-size: 125px; color: rgb(103,114,229);"></i>
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="mb-1 Mys_ftcardt">
+                  STRIPE
+                </p>
+                <p class="mb-1 Mys_ftcardc">
+                  Competencia directa de paypal, la tecnologia desarrollada por la compañia stripe nos permite manejar los procesos de pago
+                  de una manera mas sencilla y con una comision aceptable.
+                </p>
+                <p class="mb-1 Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://stripe.com/es" target="_blank"> stripe.com</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_heroku" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_heroku.png" style="height: 125px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="mb-1 Mys_ftcardt">
+                  HEROKU
+                </p>
+                <p class="mb-1 Mys_ftcardc">
+                  Plataforma en la nube la cual nos permite correr Node JS y todas sus caracteristicas para asi poder desplegar esta aplicacion con un dominio facil de recordar.
+                </p>
+                <p class="mb-1 Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://www.heroku.com/home" target="_blank"> heroku.com</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>      
+
+      <section id="ftr_mongodb" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_mongodb.png" style="height: 125px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  MONGO DB
+                </p>
+                <p class="Mys_ftcardc">
+                  Base de datos que utiliza el acomodo de datos en tipo JSON, si sabes Javascript te acostumbraras facilmente.
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://www.mongodb.com/es" target="_blank"> mongodb.com</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_webpack" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_webpack.png" style="height: 125px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  WEBPACK
+                </p>
+                <p class="Mys_ftcardc">
+                  Empaquetador y compresor de documentos HTML/CSS/JS para una mejor optimizacion del proyecto.                
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://webpack.js.org/" target="_blank"> webpack.js.org</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_multer" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_multer.png" style="width: 200px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  MULTER
+                </p>
+                <p class="Mys_ftcardc">
+                  Modulo/plugin utilizado en Node JS el cual nos permite manipular archivos del lado del servidor.
+                </p>
+                <p class="Mys_ftcardl">
+                  Documentacion de multer en github: <a class="text-white" href="https://github.com/expressjs/multer" target="_blank"> expressjs/multer</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_cloudinary" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_cloudinary.png" style="height: 105px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  CLOUDINARY
+                </p>
+                <p class="Mys_ftcardc">
+                  Servicio en la nube el cual nos permite almacenar nuestras imagenes.              
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://cloudinary.com/" target="_blank"> cloudinary.com</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_passportjs" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <img src="/img/FT_passportjs.png" style="height: 125px;">
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  PASSPORT JS
+                </p>
+                <p class="Mys_ftcardc">
+                  Con el apoyo de este plugin se puede manejar de una manera segura el uso de sessiones durante los logins.             
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="http://www.passportjs.org/" target="_blank"> passportjs.org</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+  <!-- CSS -->
+  <section class="container my-3">
+    <p class="Mys_ftsubt">CSS \</p>
+  </section>
+
+  <section class="container">
+    <div class="row">
+
+      <section id="ftr_bootstrap" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <i class="fab fa-bootstrap" style="font-size: 125px; color: rgb(86,61,124);"></i>
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  BOOTSTRAP
+                </p>
+                <p class="Mys_ftcardc">
+                  Framework de CSS el cual nos permite estilizar de una manera rapida y sencilla nuestro HTML.           
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://getbootstrap.com/" target="_blank"> bootstrap.com</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_fontawesome" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <i class="fab fa-font-awesome-alt" style="font-size: 125px; color: rgb(51,154,240);"></i>
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  FONTAWESOME
+                </p>
+                <p class="Mys_ftcardc">
+                  Libreria de iconos y fuentes las cuales les dara un toque profesional a su WEB.           
+                </p>
+                <p class="Mys_ftcardl">
+                  Enlace al sitio: <a class="text-white" href="https://fontawesome.com/" target="_blank"> fontawesome.com</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+      <section id="ftr_animatecss" class="col-md-12 col-12 px-0 py-2">
+        <div class="card animated zoomInDown slow Mys_ftcard">
+          <div class="row no-gutters align-items-center">
+
+            <section class="col-lg-3 col-12 text-center my-2 w-auto">
+              <i class="fas fa-file-code" style="font-size: 125px; color: rgb(255,78,95);"></i>
+            </section>
+            <section class="col-lg-9 col-12 pl-3">
+              <div class="card-body py-1 ">
+                <p class="Mys_ftcardt">
+                  ANIMATE.CSS
+                </p>
+                <p class="Mys_ftcardc">
+                  Libreria de CSS que nos permite animar nuestros componentes HTML.            
+                </p>
+                <p class="Mys_ftcardl">
+                  Documentacion de Animate.css en github: <a class="text-white" href="https://daneden.github.io/animate.css/" target="_blank"> github.io/animate.css</a>
+                </p>
+              </div>
+            </section>
+    
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <!--Call partial where is the footer-->
+  <%- include('partials/footer.ejs'); %>
+
+<script>
+  //Inicialize dropdown for categories options
+  let myDropdown = document.getElementById('nav_dropdown1');
+  let myDropdownInit = new Dropdown( myDropdown, true );
+  //Declare search enter and click btn option for search method
+  let inspearch = document.getElementById('nav_inpsearch');
+  document.getElementById('nav_inpsearch').addEventListener('keydown',function (e) {
+    if((e.key === 'Enter')&&(inspearch.value != '')){
+      location.href = "/search/"+ inspearch.value;
+    }
+  });
+  document.getElementById('nav_btnsearch').addEventListener('click',function (e) {
+    if(inspearch.value != ''){
+      location.href = "/search/"+ inspearch.value;
+    }
+  });
+</script>
+</body>
+</html>

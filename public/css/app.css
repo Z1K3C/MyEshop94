@@ -1,0 +1,407 @@
+/*------------------------------------- Add fonts -------------------------------------*/
+
+@font-face {
+    font-family: 'gotu1';
+    src: url('/font/Gotu-Regular.ttf');
+  }
+@font-face {
+    font-family: 'poppins1';
+    src: url('/font/Poppins-Regular.ttf');
+  }
+@font-face {
+    font-family: 'sand1';
+    src: url('/font/Quicksand-Regular.ttf');
+  }
+@font-face {
+    font-family: 'lobster1';
+    src: url('/font/Lobster-Regular.ttf');
+  }
+@font-face {
+    font-family: 'yanone1';
+    src: url('/font/YanoneKaffeesatz-Regular.ttf');
+  }
+@font-face {
+    font-family: 'baloo1';
+    src: url('/font/BalooTammudu2-Medium.ttf');
+  }
+@font-face {
+    font-family: 'warfare1';
+    src: url('/font/ModernWarfare-8MM6z.ttf');
+  }
+@font-face {
+    font-family: 'teko1';
+    src: url('/font/Teko-Regular.ttf');
+  }
+
+/*------------------------------------- classes -------------------------------------*/
+
+/*-------------------- Partial classes --------------------*/
+
+/*------- Header partial classes -------*/
+
+.Mys_back1 {
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
+}
+
+/*------- Navbar partial classes -------*/
+
+.Mys_back2 {
+  background-color: gray;
+}
+
+.Mys_icon1 {
+  width: 35px; 
+  height: 35px;
+}
+
+.Mys_btncart {
+  color: white; 
+  width: 70px;
+}
+
+.Mys_countercart {
+  font-size: 20px; 
+  font-family: poppins1;
+}
+
+.Mys_title1 {
+  vertical-align: middle; 
+  font-family: lobster1; 
+  color: white; 
+  font-size: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .Mys_title1 {
+      display: none;
+  }
+}
+
+/*------- Slider partial classes -------*/
+
+.Mys_sliderctn1{
+  height: 100%; 
+  background-color: transparent;
+}
+
+.Mys_sliderimg1{
+  height: 100%; 
+  align-self: center;
+}
+
+/*------- Footer partial classes -------*/
+
+.Mys_footback{
+  background-color: gray; 
+  min-height: 200px; 
+  font-family: poppins1;
+}
+
+.Mys_footicon1{
+  height: 44px; 
+  width: 44px;
+}
+
+/*------- Card partial classes -------*/
+
+.Mys_cardgnral{
+  height: 450px; 
+  border-width: 3px; 
+  border-style: solid; 
+  border-color: gray
+}
+
+.Mys_cardimgheader{
+  height: 200px; 
+  align-self: center;
+}
+
+.Mys_cardimg{
+  align-self: center; 
+  overflow: hidden; 
+  height: 200px; 
+  max-width: 225px; 
+  width: auto;
+}
+
+.Mys_cardbdyheader{
+  background-color: rgb(240,240,240); 
+  overflow: hidden;
+}
+
+.Mys_cardsold{
+  height: 45px; 
+  overflow: hidden; 
+  font-family: poppins1; 
+  font-size: 30px;
+}
+
+.Mys_cardtitle{
+  height: 35px; 
+  overflow: hidden; 
+  font-family: gotu1; 
+  font-size: 22px;
+}
+
+.Mys_cardnote{
+  height: 75px; 
+  overflow: hidden; 
+  font-family: sand1; 
+  font-size: 16px;
+}
+
+.Mys_cardbrand{
+  height: 30px; 
+  overflow: hidden; 
+  font-family: sand1; 
+  font-size: 16px;
+}
+
+.Mys_cardfooter{
+  background-color: rgb(240,240,240);
+}
+
+.Mys_cardbtn{
+  overflow: hidden; 
+  font-family: poppins1; 
+  font-size: 16px;
+}
+
+
+/*-------------------- classes for each ejs file --------------------*/
+
+/*------- About classes -------*/
+
+.Mys_back3_cnt{
+  height: 100%; 
+  background-color: transparent; 
+  overflow: hidden;
+}
+
+.Mys_back4_img{
+  height: 100%; 
+  align-self: center;
+}
+
+.Mys_card_main_title{
+  background-color: transparent; 
+  height: 400px;
+   overflow: hidden;
+}
+
+.Mys_misstitle{
+  font-size: 40px; 
+  text-align: center; 
+  font-family: lobster1;
+}
+
+.Mys_missbdy{
+  font-size: 24px; 
+  text-align: justify; 
+  font-family: yanone1;
+}
+
+.Mys_title4{
+  font-size: 50px; 
+  text-align: center; 
+  font-family: lobster1;
+}
+
+.Mys_iconteam1{
+  font-size: 34px; 
+  font-family: yanone1;
+}
+
+.Mys_iconteam2{
+  font-size: 26px; 
+  font-family: baloo1;
+}
+
+.Mys_momo2{
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 5px;
+  border-color: gray;
+}
+
+.Mys_worktitle{
+  font-size: 38px;
+  font-family: baloo1;
+}
+
+.Mys_workbdy{
+  font-size: 28px;
+  font-family: yanone1;
+}
+
+.Mys_contactitle{
+  font-size: 20px; 
+  font-family: baloo1;
+}
+
+.Mys_contactbdy{
+  font-size: 10px; 
+  font-family: yanone1; 
+  text-align: justify;
+}
+
+.Mys_icon5{
+  width: 350px; 
+  height: 100%; 
+  background-color: transparent;
+}
+
+.Mys_title5 {
+  font-family: lobster1; 
+  font-size: 60px;
+}
+.Mys_title6 {
+  font-family: sand1; 
+  font-size: 26px; 
+  overflow: hidden;
+}
+@media screen and (max-width: 770px){
+  .Mys_title5 {
+      font-family: lobster1; 
+      font-size: 32px;
+  }
+  .Mys_title6 {
+      font-family: sand1; 
+      font-size: 20px;
+      overflow: hidden;
+  }
+}
+
+/*------- Bought classes -------*/
+
+.Mys_cartitle2 {
+  font-family: 
+  lobster1; color: white; 
+  font-size: 30px;
+}
+
+.Mys_cartitle0 {
+  vertical-align: middle; 
+  font-family: lobster1; 
+  color: white; 
+  font-size: 20px;
+}
+
+.Mys_cart_bdy{
+  border-width: 3px; 
+  border-style: solid; 
+  border-color: gray
+}
+
+.Mys_cart_img{
+  overflow: hidden; 
+  height: auto; 
+  max-height: 175px; 
+  max-width: 200px; 
+  width: auto;
+}
+
+.Mys_cart_name{
+  vertical-align: middle; 
+  overflow: hidden; 
+  font-family: gotu1; 
+  font-size: 22px;
+}
+
+.Mys_cart_desc{
+  height: 75px; 
+  overflow: hidden; 
+  font-family: sand1; 
+  font-size: 16px;
+}
+
+.Mys_cart_btns{
+  overflow: hidden; 
+  font-family: sand1; 
+  font-size: 20px;
+}
+
+.Mys_cart_empty{
+  font-family: poppins1; 
+  font-size: 50px;
+}
+
+.Mys_cart_empty2{
+  align-self: center; 
+  height: 100%; 
+  width: auto;
+}
+
+.Mys_cart_empty3{
+  overflow: hidden; 
+  height: 100%; 
+  width: 310px;
+}
+
+.Mys_cart_sold{
+  overflow: hidden; 
+  font-family: poppins1; 
+  font-size: 30px;
+  text-align: end;
+}
+
+.Mys_cartitle1 {
+  text-align: left;
+}
+@media screen and (max-width: 770px){
+  .Mys_cartitle1 {
+      text-align: center;
+  }
+}
+
+/*------- Features classes -------*/
+
+.Mys_fttitle{
+  font-size: 38px; 
+  text-align: center; 
+  font-family: warfare1;
+}
+
+.Mys_ftsubt{
+  font-size: 38px; 
+  text-align: left; 
+  font-family: lobster1;
+}
+
+.Mys_ftcard{
+  border-width: 1px; 
+  border-style: solid;
+  border-color: gray; 
+  background-color: transparent; 
+  min-height: 130px;
+}
+
+.Mys_ftcardt{
+  font-size: 26px; 
+  font-family: warfare1; 
+  text-align: center;
+}
+
+.Mys_ftcardc{
+  font-size: 22px; 
+  font-family: yanone1; 
+  text-align: center;
+}
+
+.Mys_ftcardl{
+  font-size: 22px; 
+  font-family: yanone1; 
+  text-align: right;
+}
+
+/*-------------------- Special option --------------------*/
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/*-------------------- ?? --------------------*/
+

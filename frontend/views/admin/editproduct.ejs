@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEshop94</title>
+
+    <link href="/css/b4/bootstrap.css" rel="stylesheet">
+    <link href="/css/fa/css/all.css" rel="stylesheet">
+    <link href="/css/animate/animate.css" rel="stylesheet">
+    <script src="/js/bootstrap-native-v4.min.js"></script>
+
+    <link rel="stylesheet" href="/admin/editproduct/bundle.css">
+
+</head>
+<body class="Mys_gradient1">
+  <!--Create navigation bar with logo and button for return all product-->
+  <section style="background-color: gray; font-family: lobster1;">
+    <div class="container py-2" >
+      <div class="row">
+        <div class="col">
+          <a class="pl-4" href="/"><img src="/img/logo1.png" alt="" style="width: 35px; height: 35px;"></a>
+          <span class="pl-3" style="  vertical-align: middle; font-family: lobster1; color: white; font-size: 20px;">MyEshop94</span>
+        </div>
+        <div class="col-6">
+        </div>
+        <div class="col text-right mr-1">
+          <a class="btn btn-outline-secondary text-white" style="font-family: poppins1;" href="/admin/allproduct">
+            <i class="far fa-hand-point-left"></i> PRODUCTOS
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Create body with card that include a form for update the product select previously-->
+  <section id="edt_body1" class="container pt-2" >
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card Mys_background2">
+        <h4 class="pt-4 text-center">Editar Producto</h4>
+
+        <form id="edt_addform" class="needs-validation pt-0 p-3" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Nombre</label>
+              <input type="text" class="form-control" id="edt_nombre" required value="<%= item['nombre'] %>">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Marca</label>
+              <input type="text" class="form-control" id="edt_marca" required value="<%= item['marca'] %>"> 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="firstName">Modelo</label>
+              <input type="text" class="form-control" id="edt_modelo" required value="<%= item['modelo'] %>">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="country">Categoria</label>
+              <select class="custom-select d-block w-100" id="edt_categoria" required>
+                <option value="">Elegir...</option>
+                <!--fill whit categories the select form-->
+                <% if(type){ %>
+                  <% type.forEach(function(inf,ind){ %>
+                    <option>   <%= inf.nombre %></option>
+                  <% }); %>
+                <%} %>
+
+                <option selected><%= item['categoria'] %></option>
+              </select>
+            </div>
+            <div class="col-md-4 mb-3 text-right">
+              <label for="firstName">Precio</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id="edt_precio" required value="<%= item['precio'] %>">
+                <div class="input-group-append">
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-4 mb-3">
+              <div class="form-group">
+                <label>Vista previa</label>
+                <div id="edt_filename" style="display: none;"><%= item['filename'] %></div>
+                <div id="edt_preview" class="card Mys_prevsquad">
+
+                  <img src="<%= item['imagePath'] %>" style="align-self: center; overflow: hidden; height: 175px; max-width: 200px; width: auto;" alt="">
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-8 mb-3">
+
+              <div class="mb-3">
+                <div class="form-group">
+                  <label for="adm_descripcion">Descripcion</label>
+                  <textarea class="form-control" id="edt_descripcion" rows="4"><%= item['descripcion'] %></textarea>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="edt_imagen" lang="es" accept=".jpg, .png">
+                  <label id="edt_labeladd" class="custom-file-label" for="edt_imagen" >Seleccionar Imagen...</label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <button id="<%= item['_id'] %>" class="btn btn-outline-secondary btn-lg btn-block" type="submit">Actualizar <i class="fas fa-sync"></i></button>
+        </form>
+
+      </div>
+
+      <div id="edt_cardokzone">
+        
+      </div>
+      <div id="edt_cardnokzone">
+        
+      </div>
+
+    </div>
+  </section>
+  <!--Call partial where is the footer-->
+  <%- include('../partials/footer.ejs'); %>
+
+</body>
+<!--Call javascript-->
+<script src="/admin/editproduct/bundle.js"></script>
+</html>

@@ -1,0 +1,206 @@
+<!--Call partial header-->
+<%- include('partials/header.ejs'); %>
+
+  <!--Call partial navbar whit option for show status buy client-->
+  <% if((amount)&&(type)){ %>
+    <%- include('partials/navbar.ejs',{amount: amount, type: type, products: products}); %>
+  <%} else{ %>
+    <%- include('partials/navbar.ejs'); %>
+  <%} %>
+
+  <!--call sections-->
+  <section id="abt_main" class="row mx-0">
+    <div class="col-12 px-0">
+      <div class="card border-0 Mys_back3_cnt">
+        <img src="/img/About_main_background.png" class="Mys_back4_img">
+      </div>
+    </div>
+    <div class="col-12 position-absolute">
+      <div class="row justify-content-end mx-0">
+        <div class="col-xl-8 col-12 px-0 text-center pt-4">
+          <div class="card border-0 animated lightSpeedIn Mys_card_main_title">
+            <p class="Mys_title5">En MyEshop94 llevamos lo mejor de la tecnologia hasta tu casa</p>
+            <p class="Mys_title6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, qui maxime. Atque, incidunt, architecto inventore dolores unde reiciendis iste ad beatae, quia magnam officia hic veritatis ipsa minus eum deserunt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="abt_mission" class="container my-2">
+    <div class="row">
+      <div class="col-md-4 col-12 animated bounceInUp slow">
+        <p class="Mys_misstitle">Mision</p>
+        <p class="Mys_missbdy">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui fuga numquam debitis in placeat ullam maiores provident? Doloribus praesentium cupiditate eum saepe, minus officiis reprehenderit!
+        </p>
+      </div>
+      <div class="col-md-4 col-12 animated bounceInUp slow">
+        <p class="Mys_misstitle">Vision</p>
+        <p class="Mys_missbdy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos esse, cumque quo est repellat corrupti. Laboriosam corrupti eaque ratione id velit aliquam officia cumque nostrum omnis odio perferendis fugit, sunt distinctio alias corporis ducimus itaque necessitatibus nulla rem eos!
+        </p>
+      </div>
+      <div class="col-md-4 col-12 animated bounceInUp slow">
+        <p class="Mys_misstitle">Valores</p>
+        <p class="Mys_missbdy">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, dicta sed sequi numquam exercitationem culpa commodi totam voluptatum minus eius!        
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="abt_team" class="container my-2">
+    <p class="Mys_title4">Team MyEshop94</p>
+    <div class="row">
+      <div class="col-sm-2 col-4 text-center">
+        <img src="/img/About_team1.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team leader</p>
+        <p class="Mys_iconteam2">John III Dust</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_team2.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team leader</p>
+        <p class="Mys_iconteam2">Clifford E. White</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_team3.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team co-leader</p>
+        <p class="Mys_iconteam2">Reiss W. Young</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_team4.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team co-leader</p>
+        <p class="Mys_iconteam2">Joao Correia Souza</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_team5.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team member</p>
+        <p class="Mys_iconteam2">Máthé Zorán</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_team6.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team member</p>
+        <p class="Mys_iconteam2">Curzio Zetticci</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_team7.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team member</p>
+        <p class="Mys_iconteam2">Kogwar Ozhpri</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_teamg.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team member</p>
+        <p class="Mys_iconteam2">Bacchus Estévez Tapia</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_teamg.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team member</p>
+        <p class="Mys_iconteam2">Baldo Alfaro Méndez</p>
+      </div>
+      <div class="col-sm-2 col-4 text-center mx-auto">
+        <img src="/img/About_team8.png" style="height: 100px;">
+        <p class="mb-0" class="Mys_iconteam1">Team member</p>
+        <p class="Mys_iconteam2">Lie Limón Matías</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="abt_work" class="container">
+    <p class="Mys_title4">Bolsa de trabajo MyEshop94</p>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="/img/momo2.jpg" class="Mys_momo2">
+      </div>
+      <div class="col-md-8 pt-3">
+        <p class="Mys_worktitle">
+          Quiere ser parte del equipo Eshop94 y servir a su nacion soldado
+        </p>
+        <p class="Mys_workbdy">
+          Solo sigua las indicaciones siguientes: 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae fuga ducimus magnam beatae consequatur, cupiditate ut, libero deleniti maxime eveniet assumenda quod rerum delectus nemo atque fugiat laborum, explicabo odio iste commodi doloribus? Est, illum.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="abt_contact" class="container my-3">
+    <p class="Mys_title4">Contacto</p>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="Mys_contactitle">
+          Cualquier duda, aclaracion, comentario, necedad, negligencia, favor de contactarnos a:
+        </p>
+        <p class="Mys_contactbdy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quod voluptate vitae, sequi molestiae illum aliquam reprehenderit modi beatae adipisci, pariatur eligendi ipsum doloribus, nostrum cumque? Quis harum nihil ducimus mollitia minima repellendus dignissimos quidem quibusdam, quia itaque quae temporibus minus eum sit vitae enim odit? Nam animi tempora amet!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sunt reprehenderit eligendi delectus, a molestias ipsa eos numquam in cupiditate! Fuga iusto, cumque cupiditate quas aliquid explicabo dolore? Ea quia ut soluta! Vero quo delectus praesentium nihil unde consectetur. At dolorum cupiditate voluptatum, doloribus optio accusantium! Dolorem hic beatae reiciendis.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sapiente temporibus nulla, labore amet delectus veritatis rem fugiat nisi illo natus quibusdam nesciunt repellat praesentium harum autem non asperiores magnam quasi esse iusto sequi sit? Voluptates modi tenetur quasi asperiores!
+        </p>
+        <p class="Mys_contactbdy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quod voluptate vitae, sequi molestiae illum aliquam reprehenderit modi beatae adipisci, pariatur eligendi ipsum doloribus, nostrum cumque? Quis harum nihil ducimus mollitia minima repellendus dignissimos quidem quibusdam, quia itaque quae temporibus minus eum sit vitae enim odit? Nam animi tempora amet!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sunt reprehenderit eligendi delectus, a molestias ipsa eos numquam in cupiditate! Fuga iusto, cumque cupiditate quas aliquid explicabo dolore? Ea quia ut soluta! Vero quo delectus praesentium nihil unde consectetur. At dolorum cupiditate voluptatum, doloribus optio accusantium! Dolorem hic beatae reiciendis.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="container my-3">
+    <div class="row">
+      <div id="abt_privacity" class="col-md-6 col-12 text-center">
+        <p class="Mys_title4">Politica de privacidad</p>
+        <p class="Mys_contactbdy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, consequatur sequi non laborum ut provident minima repellendus dolorum quia placeat, facere tempore doloremque explicabo quod molestiae neque quas impedit saepe. Quam provident omnis nam est alias nobis pariatur consectetur, nihil placeat quae vitae magni cumque, amet obcaecati, illum nemo repellendus!
+        </p>
+        <p class="Mys_contactbdy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, consequatur sequi non laborum ut provident minima repellendus dolorum quia placeat, facere tempore doloremque explicabo quod molestiae neque quas impedit saepe. Quam provident omnis nam est alias nobis pariatur consectetur, nihil placeat quae vitae magni cumque, amet obcaecati, illum nemo repellendus!
+        </p>
+        <p class="Mys_contactbdy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, consequatur sequi non laborum ut provident minima repellendus dolorum quia placeat, facere tempore doloremque explicabo quod molestiae neque quas impedit saepe. Quam provident omnis nam est alias nobis pariatur consectetur, nihil placeat quae vitae magni cumque, amet obcaecati, illum nemo repellendus!
+        </p>
+      </div>
+      <div id="abt_conduct" class="col-md-6 col-12 text-center">
+        <p class="Mys_title4">Codigo de  conducta</p>
+        <p class="Mys_contactbdy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni quos in sunt corporis maxime, doloremque iusto voluptatibus molestiae cupiditate et. Sint ad neque incidunt ab quae reiciendis perferendis. Rerum temporibus impedit distinctio ea, reiciendis dignissimos laudantium natus ut dicta est, error, tempore molestias necessitatibus libero quisquam laboriosam. Facere, deleniti.
+        </p>
+        <p class="Mys_contactbdy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, consequatur sequi non laborum ut provident minima repellendus dolorum quia placeat, facere tempore doloremque explicabo quod molestiae neque quas impedit saepe. Quam provident omnis nam est alias nobis pariatur consectetur, nihil placeat quae vitae magni cumque, amet obcaecati, illum nemo repellendus!
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section class="container">
+    <div class="card mx-auto border-0 rounded-0 Mys_icon5">
+      <a href="/admin/login" target="_blank"><img src="/img/logo2.png" style="width: 350px; "></a>
+    </div>
+  </section>
+
+  <!--Call partial where is the footer-->
+  <%- include('partials/footer.ejs'); %>
+
+<script>
+  //Inicialize dropdown for categories options
+  let myDropdown = document.getElementById('nav_dropdown1');
+  let myDropdownInit = new Dropdown( myDropdown, true );
+  //Declare search enter and click btn option for search method
+  let inspearch = document.getElementById('nav_inpsearch');
+  document.getElementById('nav_inpsearch').addEventListener('keydown',function (e) {
+    if((e.key === 'Enter')&&(inspearch.value != '')){
+      location.href = "/search/"+ inspearch.value;
+    }
+  });
+  document.getElementById('nav_btnsearch').addEventListener('click',function (e) {
+    if(inspearch.value != ''){
+      location.href = "/search/"+ inspearch.value;
+    }
+  });
+</script>
+</body>
+</html>

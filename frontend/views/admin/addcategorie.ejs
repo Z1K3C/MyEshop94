@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEshop94</title>
+
+    <link href="/css/b4/bootstrap.css" rel="stylesheet">
+    <link href="/css/fa/css/all.css" rel="stylesheet">
+    <link href="/css/animate/animate.css" rel="stylesheet">
+    <script src="/js/bootstrap-native-v4.min.js"></script>
+
+    <link rel="stylesheet" href="/admin/addcategorie/bundle.css">
+
+</head>
+<body class="Mys_gradient1">
+  <!--Create navigation bar with logo-->
+  <section style="background-color: gray; font-family: lobster1;">
+    <div class="container py-2" >
+      <div class="row">
+        <div class="col">
+          <a class="pl-4" href="/"><img src="/img/logo1.png" alt="" style="width: 35px; height: 35px;"></a>
+          <span class="pl-3" style="  vertical-align: middle; font-family: lobster1; color: white; font-size: 20px;">MyEshop94</span>
+        </div>
+        <div class="col-6">
+        </div>
+        <div class="col text-right mr-1">
+          <a class="btn btn-outline-secondary text-white" style="font-family: poppins1;" href="/admin/main">
+            <i class="far fa-hand-point-left"></i> PANEL PRINCIPAL
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container pt-3" style="font-family: poppins1;">
+    <div class="row">
+      <div class="col-xl-5 pb-5">
+
+        <div class="card ">
+          <div class="card-header text-center">
+            Agregar categoria
+          </div>
+          <div class="card-body">
+
+            <section id="cat_formadd">
+ 
+              <label for="exampleInputEmail1">Nombre para la categoria</label>
+              <div class="input-group mb-3">
+                <input id="cat_inpname" class="form-control" type="text" placeholder="abarrotes" required>
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fab fa-slack-hash"></i></span>
+                </div>
+              </div>
+
+              <label for="exampleInputEmail1">Ruta para la categoria</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input id="cat_checkbox" type="checkbox" aria-label="Checkbox for following text input">
+                  </div>
+                </div>
+                <input id="cat_inppath" type="text" class="form-control" placeholder="abarrotes" readonly required>
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fas fa-window-restore"></i></span>
+                </div>
+              </div>
+              <button id="cat_btnsave" class="btn btn-outline-secondary btn-block" >
+                Guardar <i class="fas fa-save pl-1"></i>
+              </button>
+              <button id="cat_btnupdate" class="btn btn-outline-secondary btn-block" style="display: none;">
+                Actualizar <i class="fas fa-redo pl-1"></i>
+              </button>
+
+            </section>
+
+          </div>
+        </div>
+     
+      </div>
+      <div class="col-xl-7">
+        <div id="cat_allcats" style="min-height: 500px; background-color: transparent;">
+
+          <% if(categories){ %>
+            <% categories.forEach(function(inf,ind){ %>
+              <div id="card_<%= inf._id %>" class="py-1">
+
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <strong class="mr-auto"><%= inf.nombre %></strong>
+                    <small><%= inf.created_at %></small>
+                  </div>
+                  <div class="toast-body py-1">
+      
+                    <section class="row justify-content-between">
+                      <div class="col-6 text-left align-self-center">
+                        <%= inf.path %>
+                      </div>
+                      <div class="col-6 text-right">
+                        <div class="btn-group btn-block" role="group" aria-label="Basic example">
+                          <button id="btne_<%= inf._id %>" class="btn btn-outline-primary btn-sm w-50">
+                            Editar  <i id="btne_<%= inf._id %>" class="fas fa-tools"></i>
+                          </button>
+                          <button id="btnd_<%= inf._id %>" class="btn btn-outline-danger btn-sm w-50">
+                            Eliminar  <i id="btnd_<%= inf._id %>" class="fas fa-dumpster-fire"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </section>
+      
+                  </div>
+                </div>
+
+              </div>
+
+
+            <% }); %>
+          <%} %>
+
+        </div>
+      </div>
+    </div> 
+
+  </section>
+
+  <!--Call partial where is the footer-->
+  <%- include('../partials/footer.ejs'); %>
+</body>
+<!--Call javascript-->
+<script src="/admin/addcategorie/bundle.js"></script>
+</html>

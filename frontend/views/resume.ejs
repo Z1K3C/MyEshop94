@@ -1,0 +1,109 @@
+<!--Call partial header-->
+<%- include('partials/header.ejs'); %>
+  <!--Navbar whit icon-->
+  <section class="Mys_back2">
+    <div class="container py-2" >
+      <div class="row">
+        <div class="col">
+          <a class="pl-4" href="/"><img src="/img/logo1.png" alt="" style="width: 35px; height: 35px;"></a>
+          <span class="pl-3" style="  vertical-align: middle; font-family: lobster1; color: white; font-size: 20px;">MyEshop94</span>
+        </div>
+        <div class="col-6">
+        </div>
+        <div class="col text-right mr-1">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Body with card that include buy information-->
+  <section class="container pt-2">
+    <div class="row">
+      <div class="col">
+        <div class="card p-4" style="min-height: 500px; overflow: hidden;">
+
+          <div class="text-center">
+            <span style="font-family: poppins1; text-align: center; font-size: 40px;">            
+              Compra realizada con exito  
+              <% if(name){ %>   <!--show name client-->
+                <%= name %>
+              <% } %>
+            </span>
+            <span>
+              <img class="pl-3" style="height: auto; width: 60px; vertical-align: text-bottom;"
+              src="<%= imagePath %>" >
+            </span>
+          </div>
+          
+          <p style="font-family: lobster1; text-align: center; font-size: 30px;">
+            Resumen de compra <i class="far fa-list-alt pl-2"></i> 
+          </p> 
+          <div class="table-responsive">
+            <table class="table " style="font-family: poppins1;">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">C/ Unidad</th>
+                  <th scope="col">C/ total</th>
+                </tr>
+              </thead>
+              <tbody>
+  
+                <% if(products){ %>   <!--Create a row for each product client buy previously-->
+                  <% products.forEach(function(inf,ind){ %>
+                    <tr>
+                      <th scope="row"><%= (ind) + 1 %></th>
+                      <td><%= inf.quantity %></td>
+                      <td><%= inf.custom.name %></td>
+                      <td><%= (inf.amount/100).toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 }); %></td>
+                      <td><%= ((inf.amount/100) * inf.quantity).toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 }); %></td>
+                    </tr>
+                  <% }); %>
+                <% } %>
+  
+                <tr style="font-size: 24px;">
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <td style="text-align: right;" colspan="2">Total pagado: </td>
+                  <% if(amount){ %>   <!--Show amout -->
+                    <td>
+                      <p class="mb-0"><%= amount %></p> 
+                      <p class="mb-0 pl-3">MXN</p> 
+                    </td>
+                  <% } %>
+                    
+                </tr>
+  
+              </tbody>
+            </table>
+          </div>
+
+
+          <div>
+            <p style="font-family: poppins1; font-size: 20px;">
+              Guarde este codigo en un lugar seguro <i class="far fa-thumbs-up"></i>
+            </p>
+            <span style="font-family: teko1; font-size: 20px;">
+              Id de transaccion:  
+            </span>
+            <span id="rsm_transid" class="text-success pl-2" style="font-family: teko1; font-size: 20px;">
+              <% if(id){ %>       <!--show transaction id-->
+                <%= id %>
+              <% } %>
+            </span>
+            <p class="pt-4 mb-0" style="font-family: poppins1; font-size: 16px; text-align: center;">
+              <i class="fas fa-grin-alt"></i>
+              Gracias por su compra, sigua contribuyendo a este sistema capitalista con próximas contribuciones
+              <i class="fas fa-grin-alt"></i>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Call partial where is the footer-->
+  <%- include('partials/footer.ejs'); %>
+</body>
+</html>

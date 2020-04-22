@@ -1,0 +1,33 @@
+<!--Call partial header-->
+<%- include('partials/header.ejs'); %>
+  <!--Call partial navbar whit option for show status buy client-->
+  <% if((amount)&&(type)){ %>
+    <%- include('partials/navbar.ejs',{amount: amount, type: type, products: products}); %>
+  <%} else{ %>
+    <%- include('partials/navbar.ejs'); %>
+  <%} %>
+  <!--Body that show a card for each element found whit name search insert previusly for client-->
+  <% if(itemsfinded){ %>
+    <section class="container text-center pt-2" style="font-family: poppins1; font-size: 30px;">
+      <p>Su busqueda arrojo <%= itemsfinded %> cantidad de elementos</p>
+    </section>
+    <%- include('partials/cards.ejs',{items: items}); %>
+  <!--if dosn't exist elements with this search then show a error message-->
+  <%} else{ %>
+    <div id="sch_emptysearch" class="col-md-10 col-12 mx-auto py-5">
+      <div class="card">
+        <p class="text-center pt-4 Mys_cart_empty">
+          No se encontraron elementos
+        </p>
+        <div class="my-5 Mys_cart_empty2">
+          <img src="/img/momo1.jpg" class="Mys_cart_empty3">
+        </div>
+      </div>
+    </div>
+  <%} %>
+  <!--Call partial where is the footer-->
+  <%- include('partials/footer.ejs'); %>
+</body>
+<!--Call javascript-->
+<script src="/js/search.js"></script>
+</html>

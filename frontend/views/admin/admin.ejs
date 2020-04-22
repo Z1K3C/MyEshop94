@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEshop94</title>
+
+    <link href="/css/b4/bootstrap.css" rel="stylesheet">
+    <link href="/css/fa/css/all.css" rel="stylesheet">
+    <link href="/css/animate/animate.css" rel="stylesheet">
+    <script src="/js/bootstrap-native-v4.min.js"></script>
+
+    <link rel="stylesheet" href="/admin/bundle.css">
+
+</head>
+<body class="Mys_gradient1">
+  <!--Create navigation bar with logo-->
+  <section style="background-color: gray; font-family: lobster1;">
+    <div class="container py-2" >
+      <div class="row">
+        <div class="col">
+          <a class="pl-4" href="/"><img src="/img/logo1.png" alt="" style="width: 35px; height: 35px;"></a>
+          <span class="pl-3" style="  vertical-align: middle; font-family: lobster1; color: white; font-size: 20px;">MyEshop94</span>
+        </div>
+        <div class="col-6">
+        </div>
+        <div class="col text-right mr-1">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Create main page with card that show information about google acount and three options, add, edit and logout-->
+  <section class="container py-2">
+    <div class="card" style="background-color: transparent; border-color: gray; border-width: 2px; border-style: solid;">
+      <div class="row no-gutters align-items-center">
+
+        <section class="col-lg-4 col-12 text-center w-auto p-2">
+          <img src="<%= user.picture %>" class="card-img rounded-circle" style="overflow: hidden; height: auto; max-height: 320px; max-width: 320px; width: auto; border-color: gray; border-width: 5px; border-style: solid;">
+        </section>
+
+        <section class="col-lg-8 col-12 pl-3">
+          <div class="card-body">
+            <% if(user){ %>
+              <p style="font-family: lobster1; font-size: 46px;">Bienvenido de vuelta <%= user.given_name %></h5>
+              <p style="font-family: yanone1; font-size: 24px;">Las rojas son rojas las noches oscuras</p>
+              <p style="font-family: poppins1; font-size: 30px;">Datos de cuenta</p>
+              <p style="font-family: yanone1; font-size: 24px;"><%= user.name %></p>
+              <p style="font-family: yanone1; font-size: 24px;"><%= user.email %></p>
+              <% if(user.email_verified){ %>
+                <p style="font-family: yanone1; font-size: 24px;">verificado</p>
+              <% }else{ %>
+                <p style="font-family: yanone1; font-size: 24px;">no verificado</p>
+              <% } %>
+            <% }else{ %>
+              <p style="font-family: lobster1; font-size: 46px;">Uknown</h5>
+              <p style="font-family: yanone1; font-size: 24px;">Uknown</p>
+              <p style="font-family: poppins1; font-size: 30px;">Datos de cuenta</p>
+              <p style="font-family: yanone1; font-size: 24px;">Uknown</p>
+              <p style="font-family: yanone1; font-size: 24px;">Uknown</p>
+              <p style="font-family: yanone1; font-size: 24px;">Uknown</p>
+
+            <% } %>
+            <div class="row">
+              <div class="col-xl-3 p-1">
+                <a type="button" class="btn btn-outline-secondary btn-block" style="font-family: poppins1; font-size: 19px;" href="/admin/addproduct">
+                  Agregar producto <i class="fas fa-laptop-medical pl-1"></i>
+                </a>
+              </div>
+              <div class="col-xl-3 p-1">
+                <a type="button" class="btn btn-outline-secondary btn-block" style="font-family: poppins1; font-size: 19px;" href="/admin/allproduct">
+                  Todos los productos<i class="fas fa-pen-nib pl-1"></i>
+                </a>
+              </div>
+              <div class="col-xl-3 p-1">
+                <a type="button" class="btn btn-outline-secondary btn-block" style="font-family: poppins1; font-size: 19px;" href="/admin/addcategorie">
+                  Todas las categorias <i class="fab fa-elementor pl-1"></i>
+                </a>
+              </div>
+              <div class="col-xl-3 p-1">
+                <a type="button" class="btn btn-outline-secondary btn-block" style="font-family: poppins1; font-size: 19px;" href="/admin/logout">
+                  Cerrar la sesion <i class="fas fa-sign-out-alt pl-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+  <!--Call partial where is the footer-->
+  <%- include('../partials/footer.ejs'); %>
+</body>
+<!--Call javascript-->
+<script src="/admin/bundle.js"></script>
+</html>

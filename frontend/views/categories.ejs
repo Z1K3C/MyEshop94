@@ -1,0 +1,32 @@
+<!--Call partial header-->
+<%- include('partials/header.ejs'); %>
+  <!--Call partial navbar whit option for show status buy client-->
+  <% if((amount)&&(type)){ %>
+    <%- include('partials/navbar.ejs',{amount: amount, type: type}); %>
+  <%} else{ %>
+    <%- include('partials/navbar.ejs'); %>
+  <%} %>
+  <!--Body section that load cards depend client category selection-->
+  <div style="min-height: 500px;">
+    <% if(items.length > 0){ %>
+      <%- include('partials/cards.ejs',{items: items}); %>
+    <%}else { %>    <!--if dosn't exist product for category selection, then show error message-->
+      <div id="emptytype" class="col-md-10 col-12 mx-auto py-5">
+        <div class="card">
+          <p class="text-center pt-4 Mys_cart_empty">
+            No hay elementos de esta categoria
+          </p>
+          <div class="my-5 Mys_cart_empty2">
+            <img src="/img/momo1.jpg" class="Mys_cart_empty3">
+          </div>
+        </div>
+      </div>
+    <%} %>
+  </div>
+  <!--Call partial where is the footer-->
+  <%- include('partials/footer.ejs'); %>
+
+</body>
+<!--Call javascript-->
+<script src="/js/categories.js"></script>
+</html>

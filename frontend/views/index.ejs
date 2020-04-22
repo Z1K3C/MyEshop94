@@ -1,0 +1,28 @@
+<!--Call partial header-->
+<%- include('partials/header.ejs'); %>
+  <!--Call partial navbar whit option for show status buy client-->
+  <% if((amount)&&(type)){ %>
+    <%- include('partials/navbar.ejs',{amount: amount, type: type, products: products}); %>
+  <%} else{ %>
+    <%- include('partials/navbar.ejs'); %>
+  <%} %>
+  <!--Call partial with slider image-->
+  <%- include('partials/slider.ejs'); %>
+  <!--Call partial with cards for each product-->
+  <% if(items){ %>
+    <%- include('partials/cards.ejs',{items: items}); %>
+  <%} else{ %>
+    <%- include('partials/cards.ejs'); %>
+  <%} %>
+  <!--Call partial with buttons previus/next/1/2/3/etc-->
+  <% if(items){ %>
+    <%- include('partials/pages.btns.ejs',{page: page, limit: limit}); %>
+  <%} else{ %>
+    <%- include('partials/pages.btns.ejs'); %>
+  <%} %>
+  <!--Call partial where is the footer-->
+  <%- include('partials/footer.ejs'); %>
+</body>
+<!--Call javascript-->
+<script src="/js/app.js"></script>
+</html>
