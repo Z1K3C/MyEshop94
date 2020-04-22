@@ -118,8 +118,8 @@ router.get('/create-checkout-session', async (req, res) => {      //Create a che
         //customer_email: cliente[0]['correo'],
         line_items: line_items,
         locale: 'auto',
-        success_url: 'http://localhost:3000/cart/resume/{CHECKOUT_SESSION_ID}',
-        cancel_url: 'http://localhost:3000/cart/all',
+        success_url: 'https://myeshop94.herokuapp.com/cart/resume/{CHECKOUT_SESSION_ID}',
+        cancel_url: 'https://myeshop94.herokuapp.com/cart/all',
       });
     };
     res.send({  sessionId: session.id  });                        //return session ID
