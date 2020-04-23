@@ -41,3 +41,24 @@ document.getElementById('nav_btnsearch').addEventListener('click',function (e) {
     location.href = "/search/"+ inspearch.value;
   }
 });
+
+let btn1 = document.getElementById('ind_btn1') || false;
+if(btn1){
+  btn1.addEventListener('click',function (e) {
+    document.getElementById('ind_modalC').className = "fade modal animated fadeOut"
+    setTimeout(() => {
+      document.getElementById('ind_modalC').style.display = "none";
+      document.getElementById('ind_modalC').style.opacity = "1";
+    }, 500);
+  });
+}
+let btn2 = document.getElementById('ind_btn2') || false;
+if(btn2){
+  btn2.addEventListener('click',function (e) {
+    document.getElementById('ind_modalC').className = "fade modal animated fadeOut"
+    setTimeout(() => {
+      document.getElementById('ind_modalC').style.display = "none";
+      document.getElementById('ind_modalC').style.opacity = "1";
+    }, 500);
+  });
+}

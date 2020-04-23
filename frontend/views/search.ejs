@@ -27,6 +27,10 @@
   <%} %>
   <!--Call partial where is the footer-->
   <%- include('partials/footer.ejs'); %>
+  <!--Call partial where is cookie message-->
+  <% if(!finded){ %>
+    <%- include('partials/modalcookie.ejs') %>
+  <%} %>
 </body>
 <!--Call javascript-->
 <script src="/js/search.js"></script>

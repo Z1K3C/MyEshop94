@@ -65,7 +65,7 @@ router.get('/', async function(req, res) {                //if a unknown user in
                     .limit(12)
                     .skip(0);
                                                         //render index.ejs
-  res.render('index.ejs',{items,page: 1,limit, amount, type, products});
+  res.render('index.ejs',{items,page: 1,limit, amount, type, products, finded});
 });
 
 router.get('/search/:yoursearch', async function(req, res) {    //if USER click btn search or click enter in searcher then...
@@ -91,7 +91,7 @@ router.get('/search/:yoursearch', async function(req, res) {    //if USER click 
   for (let i = 0; i < limit; i++)                         //Excract all product name just for seach input navbar
     products[i] = products[i]['nombre'];
                                                           //render search.ejs
-  res.render('search.ejs',{amount, type, products, items, itemsfinded});
+  res.render('search.ejs',{amount, type, products, items, itemsfinded, finded});
 });
 
 router.get('/about/everthing', async (req, res) => {      //If USER into tthis page then render about.ejs
@@ -114,7 +114,7 @@ router.get('/about/everthing', async (req, res) => {      //If USER into tthis p
     products[i] = products[i]['nombre'];
   }
 
-  res.render('about.ejs',{amount, type, products});
+  res.render('about.ejs',{amount, type, products, finded});
 });
 
 router.get('/about/features', async (req, res) => {       //If USER into this page then render features.ejs
@@ -138,7 +138,7 @@ router.get('/about/features', async (req, res) => {       //If USER into this pa
     products[i] = products[i]['nombre'];
   }
 
-  res.render('features.ejs',{amount, type, products});
+  res.render('features.ejs',{amount, type, products, finded});
 });
 
 //------------------------------------- page routes -------------------------------------//
@@ -173,7 +173,7 @@ router.get('/:id',async function(req, res) {            //If USER type in explor
                       .find()
                       .limit(12)
                       .skip(skip);                    //render pages.ejs with 12 products depend user page indicate
-    res.render('pages.ejs',{items,page,limit,amount,type,products});
+    res.render('pages.ejs',{items,page,limit,amount,type,products, finded});
   }else{
     res.redirect('/'+limit);
   }
@@ -201,7 +201,7 @@ router.get('/categoria/:id', async (req, res) => {    //if USER click buttton ca
     products[i] = products[i]['nombre'];
   }
                                                       //render products with this categorie
-  res.render('categories.ejs',{items,amount,type,products});
+  res.render('categories.ejs',{items,amount,type,products, finded});
 });
 
 router.get('/query/categories', async (req, res) => {   //only search all categories and send throw rest api

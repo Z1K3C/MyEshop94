@@ -100,7 +100,7 @@ router.get('/all', async (req, res) => {                //If USER clicked button
   if(logged){
       email = req['user']['_json']['email'];              
   }
-  res.render('bought.ejs',{cart,amount,subtotal,total,logged,email});     //Send all product that USER selected previously and render bought page
+  res.render('bought.ejs',{cart,amount,subtotal,total,logged,email,finded});     //Send all product that USER selected previously and render bought page
   
 });
 
